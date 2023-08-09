@@ -1,0 +1,54 @@
+
+<div class="profile-header">
+  <span class="back-arrow" (click)="goBack()">&lt;</span>
+  <h2>Profile Page</h2>
+</div>
+<table class="profile-table">
+  <tr>
+    <td><strong>Photo:</strong></td>
+    <td class="description" (click)="openPopup('Name')">
+      <img src="/assets/img/student.png" alt="Image" class="button-image" />
+      <span> > </span>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Name:</strong></td>
+    <td class="description" (click)="openPopup('Name')">{{ userData.name }} <span>></span></td>
+  </tr>
+  <tr>
+    <td><strong>Grade:</strong></td>
+    <td class="description" (click)="openPopup('Grade')">8 <span>></span></td>
+  </tr>
+  <tr>
+    <td><strong>Phone:</strong></td>
+    <td class="description" (click)="openPopup('Phone')">123-456-7890 <span>></span></td>
+  </tr>
+  <tr>
+    <td><strong>Board:</strong></td>
+    <td class="description" (click)="openPopup('Board')">CBSE <span>></span></td>
+  </tr>
+  <tr>
+    <td><strong>Parent Name:</strong></td>
+    <td class="description" (click)="openPopup('Parent Name')">Rajesh Gupta <span>></span></td>
+  </tr>
+  <tr>
+    <td><strong>Email:</strong></td>
+    <td class="description" (click)="openPopup('Email')">{{ userData.email }} <span>></span></td>
+  </tr>
+  <tr>
+    <td><strong>Address:</strong></td>
+    <td class="description" (click)="openPopup('Address')">123, Main Street, City <span>></span></td>
+  </tr>
+</table>
+
+<!-- ... existing profile table ... -->
+
+<app-popup [popupMessage]="popupMessage" *ngIf="showPopup" (popupSubmitted)="handlePopupSubmitted($event)"></app-popup>
+
+<button (click)="logOut(userData.id)" class="logOutButton">Log out</button>
+
+
+
+
+
+

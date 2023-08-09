@@ -1,0 +1,147 @@
+
+/* Add some basic styling for the header */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+   /* Remove default margin */
+    padding: 0;
+   /* Remove default padding */
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    position: relative;
+   /* Add position relative to the container */
+    z-index: 1;
+   /* Set z-index to bring the container to the front */
+}
+.accordion {
+    background-color: aliceblue;
+    font-weight : bold;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+    position: relative;
+   /* Add position relative to the accordion */
+    z-index: 2;
+   /* Set z-index to bring the accordion to the front */
+}
+.active, .accordion:hover {
+    background-color: aliceblue;
+    font-weight : bold;
+}
+.panel {
+    padding: 0 18px;
+    background-color: aliceblue;
+    display: none;
+}
+/** This is FAQ Header**/
+.first-header {
+    padding-top : 100px;
+    text-align: center;
+    color: black;
+}
+.header-list {
+    background-color: whitesmoke;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+   /* Align items to both ends of the flex container */
+    align-items: center;
+   /* Center the items vertically */
+    list-style-type : none
+}
+/** FAQ Q/A section **/
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.faq {
+    margin-bottom: 20px;
+}
+.para {
+    background-color: aliceblue;
+}
+.question {
+    font-weight: bold;
+    font-size: 14px;
+}
+.answer {
+    margin-top: 5px;
+    font-size: 14px;
+}
+/* Fix the first header section */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: whitesmoke;
+    padding: 1px;
+    display: flex;
+    justify-content: space-between;
+   /* Align items to both ends of the flex container */
+    align-items: center;
+   /* Center the items vertically */
+}
+.header-list-item {
+    padding : inherit;
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+a:link {
+    text-decoration: none;
+}
+/** Footer */
+.footer {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+}
+.footer-section {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+.footer-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.footer-heading {
+    margin-bottom: 10px;
+}
+.footer-content {
+    --tw-text-opacity: 1;
+    color: rgb(153 153 153 / var(--tw-text-opacity));
+    text-align: justify;
+    line-height: 1.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-top: 0.5rem;
+}
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links li {
+    margin-bottom: 10px;
+   /* Added spacing between links */
+}
+.footer-links a {
+    text-decoration: none;
+    color: #FFA500;
+   /* Orange color */
+    display: block;
+}
+
