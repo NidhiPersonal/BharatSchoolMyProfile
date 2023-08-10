@@ -17,19 +17,19 @@
   </tr>
   <tr>
     <td><strong>Grade:</strong></td>
-    <td class="description" (click)="openPopup('Grade')">8 <span>></span></td>
+    <td class="description" (click)="openPopup('Grade')">{{ userData.grade }} <span>></span></td>
   </tr>
   <tr>
     <td><strong>Phone:</strong></td>
-    <td class="description" (click)="openPopup('Phone')">123-456-7890 <span>></span></td>
+    <td class="description" (click)="openPopup('Phone')">{{userData.phone}} <span>></span></td>
   </tr>
   <tr>
     <td><strong>Board:</strong></td>
-    <td class="description" (click)="openPopup('Board')">CBSE <span>></span></td>
+    <td class="description" (click)="openPopup('Board')">{{userData.board}} <span>></span></td>
   </tr>
   <tr>
     <td><strong>Parent Name:</strong></td>
-    <td class="description" (click)="openPopup('Parent Name')">Rajesh Gupta <span>></span></td>
+    <td class="description" (click)="openPopup('Parent Name')">{{userData.parentName}} <span>></span></td>
   </tr>
   <tr>
     <td><strong>Email:</strong></td>
@@ -37,7 +37,7 @@
   </tr>
   <tr>
     <td><strong>Address:</strong></td>
-    <td class="description" (click)="openPopup('Address')">123, Main Street, City <span>></span></td>
+    <td class="description" (click)="openPopup('Address')">{{userData.address}} <span>></span></td>
   </tr>
 </table>
 

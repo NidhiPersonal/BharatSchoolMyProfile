@@ -1,6 +1,9 @@
 {
   "name": "bharat-school-my-profile",
   "version": "0.0.0",
+  "description": "My Profile section",
+  "keywords": ["npm", "package"],
+  "author": "nids786",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

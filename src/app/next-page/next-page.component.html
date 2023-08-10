@@ -2,7 +2,7 @@
 <html ng-app="myApp">
 <div class="main-heading">
     <img src="/assets/img/student.png" alt="Main Heading Image" class="main-heading-image" />
-    <h2>Hi User</h2>
+    <h2>Hi {{myProfileDetails.userDetails.name}} </h2>
   </div>
 
 <div *ngFor="let button of buttons" class="button-container">

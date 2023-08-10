@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../service/user-service.service';
 
 @Component({
   selector: 'app-next-page',
@@ -7,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./next-page.component.css']
 })
 export class NextPageComponent implements OnInit {
+  myProfileDetails: any;
   buttons: any[] = [
     {
       name: 'User Details',
@@ -40,12 +42,16 @@ export class NextPageComponent implements OnInit {
     }
   ];
 
-  constructor(private router: Router) { }
+  constructor(private userService : UserService, private router: Router) {
+    this.myProfileDetails = this.userService.getUserDetails();
+    console.log(this.myProfileDetails)
+   }
 
   ngOnInit(): void {
   }
 
   navigateTo(route: string): void {
+    this.userService.setUserDetails(this.myProfileDetails.userDetails);
     this.router.navigate([route]);
   }
 }

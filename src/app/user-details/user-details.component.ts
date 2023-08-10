@@ -13,20 +13,21 @@ export class UserDetailsComponent implements OnInit {
   showPopup = false;
   popupMessage = '';
   inputValue = '';
+  userDetails: any;
   constructor(private UserService: UserService, private router: Router) {
-    // TODO : Make use of UserService
-    this.userData.email = "testEmail";
-    this.userData.id = "testId";
-    this.userData.name = "testName";
+    this.userDetails = this.UserService.getUserDetailss();
+    this.userData.email = this.userDetails.email;
+    this.userData.id = this.userDetails.id;
+    this.userData.name = this.userDetails.name;
+    this.userData.grade = this.userDetails.grade;
+    this.userData.photo = this.userDetails.photo;
+    this.userData.phone = this.userDetails.phone;
+    this.userData.board = this.userDetails.board;
+    this.userData.parentName = this.userDetails.parentName;
+    this.userData.address = this.userDetails.address;
   }
 
   ngOnInit() {
-    // TODO : Pass actual data via constructor.
-    // this.userData = this.user;
-    // HardCoding values.
-    this.userData.email = "testEmail";
-    this.userData.id = "testId";
-    this.userData.name = "testName";
   }
 
   // Function to navigate back to /home when the back arrow is clicked
