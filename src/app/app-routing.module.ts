@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MyProfileButtonComponent } from './my-profile-button/my-profile-button.component';
 import { NextPageComponent } from './next-page/next-page.component';
 import { HelpSupportComponent } from './help-support/help-support.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
@@ -11,18 +10,13 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { AskDoubtComponent } from './ask-doubt/ask-doubt.component';
 import { StudyMaterialComponent } from './study-material/study-material.component';
 import {APP_BASE_HREF} from '@angular/common';
+import { AppComponent } from './app.component';
 
 
 
 const routes: Routes = [
-  { path: '', component: MyProfileButtonComponent },
-  { path: 'next-page', component: NextPageComponent },
-  { path: 'user-details', component: UserDetailsComponent },
-  { path: 'about-bharat-school', component: AboutUsComponent },
-  { path: 'ask-doubt', component: AskDoubtComponent },
-  { path: 'study-material', component: StudyMaterialComponent },
-  { path: 'help-support', component: HelpSupportComponent },
-  { path: 'faq', component: FaqComponent },
+  { path: '', component: AppComponent },
+
 ];
 
 @NgModule({

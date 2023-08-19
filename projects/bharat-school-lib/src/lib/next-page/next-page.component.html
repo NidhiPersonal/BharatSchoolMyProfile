@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<div class="main-heading">
+    <img src="/assets/img/student.png" alt="Main Heading Image" class="main-heading-image" />
+    <h2>Hi {{myProfileDetails.userDetails.name}} </h2>
+  </div>
+
+<div *ngFor="let button of buttons" class="button-container">
+  <button (click)="navigateTo(button.route)" class="my-profile-button">
+    <img [src]="button.image" alt="{{ button.name }} Image" class="button-image" />
+    <span>{{ button.name }}</span>
+    <span class="my-profile-button-click"> > </span>
+  </button>
+</div>
+</html>
+

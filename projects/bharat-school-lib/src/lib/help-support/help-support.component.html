@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head >
+  <script>
+// app.js
+var app = angular.module('myApp', []);
+app.controller('AccordionController', function() {
+  console.log("We are hereee")
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach(accordion => {
+      accordion.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    });
+  });
+  </script>
+  <script src="assets/js/help-support.js"></script>
+  <title>EdTech FAQ</title>
+</head>
+<body ng-controller="AccordionController">
+
+<h1 class="first-header">Frequently Asked Questions</h1>
+
+<button class="accordion">Need help with App Use?</button>
+<div class="panel">
+  <div class="container">
+    <div class="faq">
+      <div class="question">1. Now able to find app?</div>
+      <div class="answer">Ans: Go to the play store and search Bharat School or use this link.</div>
+    </div>
+
+    <div class="faq">
+      <div class="question">2. Not able to login?</div>
+      <div class="answer">Ans: Uninstall and install the app again.</div>
+    </div>
+
+    <div class="faq">
+      <div class="question">3. Not able to see the course?</div>
+      <div class="answer">Ans: Go to the My Course section. Still not able to see, please check the registered phone number. If the issue is not resolved, please contact the Mentor Teacher or send an email to Support.</div>
+    </div>
+
+    <div class="faq">
+      <div class="question">4. Other issues?</div>
+      <div class="answer">Ans: Please send an email to support.</div>
+    </div>
+
+    <div class="download-section">
+      <h2>Download App</h2>
+      <p>For Android, iPhone, Web, MacBook, iPad.</p>
+      <!-- Add download links or instructions here -->
+    </div>
+  </div>
+</div>
+
+<button class="accordion">Need help with payment and refund</button>
+<div class="panel">
+  <div class="container">
+  <div class="faq">
+    <div class="question">1. Payment failed and Money not refunded</div>
+    <div class="answer">Ans: It will be refunded in 4-5 Working Days. Still not received? Please send an email or call support.</div>
+  </div>
+
+  <div class="faq">
+    <div class="question">2. Not Able to pay in App?</div>
+    <div class="answer">Ans: Use Scan Code or UPI to transfer the payment.</div>
+  </div>
+
+  <div class="faq">
+    <div class="question">3. Refund did not receive?</div>
+    <div class="answer">Ans: Please go through refund policy details under the policies section. Still did not get, please check with the assigned Mentor Teacher or contact support. Note: Payments made to Bharat School accounts will be valid to get the course or refund.</div>
+  </div>
+  </div>
+</div>
+
+<button class="accordion">Need help with service and quality</button>
+<div class="panel">
+  <div class="container">
+    <div class="faq">
+      <div class="answer"> Any issue realted to Mentor Teacher support, Live Session Quality Etc. Please mail to productissues@BharatSchool.com
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="accordion">Query related to enrollment</button>
+
+<div class="panel">
+  <div class="container">
+    <div class="faq">
+      <div class="answer"> "Please fill your query. Respective team will contact within 60 Minutes."
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- -->
+
+<!-- Add more FAQs as needed -->
+</body>
+</html>
+<router-outlet></router-outlet>

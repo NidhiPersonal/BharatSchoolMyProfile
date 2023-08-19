@@ -1,0 +1,20 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/bharat-school-lib",
+  "assets": ["./assets"],
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "allowedNonPeerDependencies": ["@angular/animations", "@angular/commonto", "@angular/common",
+  "tslib",
+  "@angular/animations",
+  "@angular/common",
+  "@angular/compiler",
+  "@angular/core",
+  "@angular/forms",
+  "@angular/platform-browser",
+  "@angular/platform-browser-dynamic",
+  "@angular/router",
+  "rxjs",
+  "zone.js"]
+}

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../model/user';
 
 
@@ -19,10 +20,10 @@ export class UserService {
 
   public save(user: User) {
     return;
-    //return this.http.post<User>(this.usersUrl, user);
   }
 
   setMyProfileDetails(details: any) {
+    console.log("Check if this is set")
     this.myProfileDetails = details;
   }
 
