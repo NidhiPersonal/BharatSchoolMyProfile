@@ -3,7 +3,7 @@ export class User {
     name: string | undefined ;
     email: string | undefined ;
     photo : String | undefined;
-    grade : Int32Array | undefined;
+    grade : String | undefined;
     phone : string | undefined;
     board : String | undefined;
     parentName : String | undefined;

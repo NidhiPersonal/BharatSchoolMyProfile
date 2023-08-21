@@ -8,7 +8,7 @@ import { UserService } from '../service/user-service.service';
   styleUrls: ['./next-page.component.css']
 })
 export class NextPageComponent implements OnInit {
-  myProfileDetails: any;
+  userDetails: any;
   buttons: any[] = [
     {
       name: 'User Details',
@@ -44,15 +44,14 @@ export class NextPageComponent implements OnInit {
 
   constructor(private userService : UserService, private router: Router) {
     console.log("Inside lib may be")
-    this.myProfileDetails = this.userService.getUserDetails();
-    console.log(this.myProfileDetails)
+    this.userDetails = this.userService.getUserDetails();
+    console.log(this.userDetails)
    }
 
   ngOnInit(): void {
   }
 
   navigateTo(route: string): void {
-    this.userService.setUserDetails(this.myProfileDetails.userDetails);
     this.router.navigate([route]);
   }
 }

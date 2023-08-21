@@ -28,7 +28,7 @@ import {APP_BASE_HREF} from '@angular/common';
 // ];
 
 const routes: Routes = [
-  { path: '', component: MyProfileButtonComponent },
+  { path: 'my-profile', component: MyProfileButtonComponent },
   { path: 'next-page', component: NextPageComponent },
   { path: 'user-details', component: UserDetailsComponent },
   { path: 'about-bharat-school', component: AboutUsComponent },

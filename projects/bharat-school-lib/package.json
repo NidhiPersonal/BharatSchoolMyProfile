@@ -1,6 +1,6 @@
 {
   "name": "bharat-school-lib",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "peerDependencies": {
     "tslib": "^2.3.0",
     "@angular/animations": "~13.4.0",

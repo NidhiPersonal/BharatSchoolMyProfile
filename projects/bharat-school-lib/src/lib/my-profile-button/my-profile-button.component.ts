@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../service/user-service.service';
+import { userConfig } from '../model/userConfig';
 
 @Component({
   selector: 'app-my-profile-button',
@@ -10,17 +11,26 @@ import { UserService } from '../service/user-service.service';
 export class MyProfileButtonComponent implements OnInit {
   
   // TODO 
-  @Input() myProfileDetails: any;
+  @Input() myProfileDetails!: userConfig;
+  @Input() logoutHandler?: (userId : String) => void;
 
   constructor(private router: Router, private userService : UserService) {
    }
 
   ngOnInit(): void {
+    console.log("Are we here")
   }
 
-  goToNextPage(myProfileDetails: any): void {
-    console.log(myProfileDetails + "here atleast")
-    this.userService.setMyProfileDetails(myProfileDetails)
+  goToNextPage(myProfileDetails: userConfig): void {
+    console.log(myProfileDetails.user + "here atleast")
+    this.userService.setMyProfileDetails(myProfileDetails);
+    if(myProfileDetails.updateUserDetails) {
+      console.log(myProfileDetails.updateUserDetails + "myProfileDetails.updateUserDetails")
+      this.userService.setUpdateUserDetails(myProfileDetails.updateUserDetails)
+    }
+    if(myProfileDetails.logoutHandler) {
+       this.userService.setLogOutHandler(myProfileDetails.logoutHandler);
+    }
     this.router.navigate(['/next-page']);
   }
 }
